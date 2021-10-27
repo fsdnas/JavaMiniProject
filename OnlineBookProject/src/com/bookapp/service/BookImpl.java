@@ -36,9 +36,10 @@ public class BookImpl implements BookInter {
 			for (Book book : bookList) {
 				if (book.getAuthor().equalsIgnoreCase(author)) {
 					filteredAuthorList.add(book);
-				} else {
-					throw new AuthorNotFoundException("author not found :there is no author");
-				}
+				} 
+			}
+			if(filteredAuthorList.size() == 0) {
+				throw new AuthorNotFoundException("author not found :there is no author");
 			}
 
 		}
@@ -60,10 +61,10 @@ public class BookImpl implements BookInter {
 				if (book.getCategory().equalsIgnoreCase(category)) {
 					filteredCategoryList.add(book);
 				} 
-				else {
-
-					throw new CategoryNotFoundException("category not found: there is no category");
-				}
+				
+			}
+			if(filteredCategoryList.size() == 0) {
+				throw new CategoryNotFoundException("category not found: there is no category");
 			}
 
 		}
