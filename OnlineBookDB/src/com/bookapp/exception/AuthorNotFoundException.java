@@ -1,3 +1,9 @@
+/**
+* @author  Nayeem
+* @version 1.0
+* @since   08-11-2021 
+*/
+
 package com.bookapp.exception;
 
 public class AuthorNotFoundException extends Exception {
